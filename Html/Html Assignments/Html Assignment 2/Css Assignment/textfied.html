@@ -1,0 +1,62 @@
+<!-- 2. Write an HTML using internal CSS that has 3 Text Input Fields
+All should shown in one line
+Set the left and right margins to appropriate space
+Set the border to solid blue
+Set border size properly
+Below this show an image , show a rounded border in red color to image
+
+Adjust the top margin of image to have proper distance from texfields -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Array Add and Display</title>
+</head>
+<body>
+
+<h2>Array Example</h2>
+
+<input type="text" id="textInput" placeholder="Enter value">
+<button onclick="addData()">Add</button>
+<button onclick="displayData()">Display</button>
+
+<ul id="list"></ul>
+
+<script>
+    let arr = [];
+
+    function addData() {
+        let value = document.getElementById("textInput").value;
+        
+        if (value !== "") {
+            arr.push(value);
+            document.getElementById("textInput").value = "";
+            alert("Added to array");
+        } else {
+            alert("Please enter something");
+        }
+    }
+
+    function displayData() {
+        let ul = document.getElementById("list");
+        ul.innerHTML = "";
+
+        for (let i = 0; i < arr.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = arr[i];
+            ul.appendChild(li);
+        }
+    }
+</script>
+
+</body>
+</html>
+</body>
+</html> 

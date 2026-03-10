@@ -1,0 +1,49 @@
+<!-- 4) In NewUser.html page button on click of Register Button display all information on same page in table format -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>New User Registration</title>
+
+<script>
+function displayData() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var mobile = document.getElementById("mobile").value;
+    var city = document.getElementById("city").value;
+
+    var table = "<table border='1' cellpadding='8'>";
+    table += "<tr><th>Name</th><th>Email</th><th>Mobile</th><th>City</th></tr>";
+    table += "<tr>";
+    table += "<td>" + name + "</td>";
+    table += "<td>" + email + "</td>";
+    table += "<td>" + mobile + "</td>";
+    table += "<td>" + city + "</td>";
+    table += "</tr>";
+    table += "</table>";
+
+    document.getElementById("result").innerHTML = table;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>New User Registration</h2>
+
+<form>
+Name: <input type="text" id="name"><br><br>
+Email: <input type="email" id="email"><br><br>
+Mobile: <input type="text" id="mobile"><br><br>
+City: <input type="text" id="city"><br><br>
+
+<button type="button" onclick="displayData()">Register</button>
+</form>
+
+<br>
+
+<div id="result"></div>
+
+</body>
+</html>

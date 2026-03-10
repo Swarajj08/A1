@@ -1,0 +1,38 @@
+<!-- 1) in Day2 Assignments 
+     add fieldset and legend tags 
+    add html5 validators for fields  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+     <h2>New User</h2>
+    <form>
+        <fieldset> <br>
+            <legend><i><b>Names</b></i></legend>
+        <label for="firstname">First Name =</label>
+        <input type="text" id="firstname" placeholder="Enter Name" pattern="[A-Za-z]{2,20}" required><br><br>
+        <label for="lastname">Last Name =</label>
+        <input type="text" id="lastname" placeholder="Enter Last Name"><br><br>
+        <label for="username">User Name =</label>
+        <input type="text" id="username" placeholder="Enter User Name" minlength="4" maxlength="12" required><br><br> //html5 validators for fields
+        </fieldset><br><br>
+        <fieldset> <br>
+             <legend><i><b>Choose One</b></i></legend>
+        <label for="gender">Gender =</label>
+        <label for="male">Male</label>
+         <input type="radio" id="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female"><br><br>
+        
+        </fieldset>
+        <br><br>
+       
+        <button>Submit</button>
+      
+    </form>
+</body>
+</html>
